@@ -1,2 +1,2 @@
-rails-mentoring-nyc
+rails-mentor-match
 ===================
