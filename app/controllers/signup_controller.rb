@@ -1,15 +1,5 @@
 class SignupController < AuthenticatedController
-  def welcome
-  end
-
   def benefits
-  end
-
-  def define_role
-    if Profile::ROLES.include? params[:role].downcase
-      session['auth.signup.role'] = params[:role].downcase
-      redirect_to '/auth/github?redirect_uri=/signup/complete-profile'
-    end
   end
 
   def complete_profile
@@ -30,6 +20,19 @@ class SignupController < AuthenticatedController
     else
       redirect_to signup_success_path
     end
+  end
+
+  def define_role
+    if Profile::ROLES.include? params[:role].downcase
+      session['auth.signup.role'] = params[:role].downcase
+      redirect_to '/auth/github?redirect_uri=/signup/complete-profile'
+    end
+  end
+
+  def success
+  end
+
+  def welcome
   end
 
   private

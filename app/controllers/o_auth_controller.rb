@@ -1,4 +1,4 @@
-class OAuthController < AuthenticatedController
+class OAuthController < ApplicationController
   CONTENT_TYPE          = 'application/json'
   GITHUB_URL            = 'https://github.com'
   GITHUB_OAUTH_CALLBACK = "#{ENV['DOMAIN']}/auth/github/callback"

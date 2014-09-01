@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  ADMINISTRATORS = ['chad.pry@gmail.com', 'cheryl.crouse@gmail.com']
 
   before_create {|model| model.confirmation_token = SecureRandom.hex(25)}
   after_create  {|model| model.send_confirmation!}
@@ -21,7 +22,7 @@ class User < ActiveRecord::Base
   end
 
   def administrator?
-    github.email == 'chad.pry@gmail.com'
+    ADMINISTRATORS.include? github.email
   end
 
   def confirm!
