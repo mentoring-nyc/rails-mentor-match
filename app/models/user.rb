@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
     identity.user
   end
 
+  def administrator?
+    github.email == 'chad.pry@gmail.com'
+  end
+
   def confirm!
     #UserMailer.signup_summary(self).deliver
     update_attributes(confirmation_token: nil, confirmed_at: DateTime.now)
