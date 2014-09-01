@@ -68,9 +68,9 @@ Rails.application.configure do
     address: ENV['SMTP_ADDRESS'],
     port: ENV['SMTP_PORT'],
     domain: ENV['SMTP_DOMAIN'],
-    authentication: ENV['SMTP_AUTHENTICATION'] || :plain,
-    :user_name: ENV['MANDRILL_USERNAME'],
-    :password: ENV['MANDRILL_APIKEY']
+    authentication: (ENV['SMTP_AUTHENTICATION'] || :plain),
+    user_name: ENV['MANDRILL_USERNAME'],
+    password: ENV['MANDRILL_APIKEY']
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
