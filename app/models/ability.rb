@@ -6,6 +6,10 @@ class Ability
       can :access, :rails_admin
       can :dashboard
       can :manage, :all
+    elsif user.community_manager?
+      can :access, :rails_admin
+      can :dashboard
+      can :manage, [Profile]
     end
     # Define abilities for the passed in user here. For example:
     #

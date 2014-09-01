@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  ADMINISTRATORS = ['chad.pry@gmail.com', 'cheryl.crouse@gmail.com']
+  ADMINISTRATORS     = ['chad.pry@gmail.com']
+  COMMUNITY_MANAGERS = ['chad.pry@gmail.com', 'cheryl.crouse@gmail.com']
 
   before_create {|model| model.confirmation_token = SecureRandom.hex(25)}
   after_create  {|model| model.send_confirmation!}
@@ -23,6 +24,10 @@ class User < ActiveRecord::Base
 
   def administrator?
     ADMINISTRATORS.include? github.email
+  end
+
+  def community_manager?
+    COMMUNITY_MANAGERS.include? github.email
   end
 
   def confirm!
