@@ -1,0 +1,64 @@
+.container-fluid
+  .hero
+    .row
+      .col-xs-12
+        .row
+          .mission.col-xs-12.text-center
+            .row
+              .col-xs-12
+                .subtitle
+                  Sharing
+
+            .row
+              .col-xs-12
+                .title
+                  Experience &amp; Craft
+
+            .action
+              = link_to 'Signup', signup_benefits_path, class: 'btn btn-warning btn-signup'
+
+.container{style: 'position: relative'}
+  .row
+    .content.col-xs-12.text-center
+      %h2
+        Meet mentors in the community, or become one!
+
+      .row
+        .col-sm-2.hidden-xs
+        .col-xs-12.col-sm-8
+          %p
+            The opportunities today are endless in our city.  Technology use is creating
+            more options than many other fields and continues to increase year after year.
+            Our goal is to encourage and support individuals who want to manage their own
+            learning.  We believe by building a community of mentorship, this is only a
+            conversation away.
+        .col-sm-2.hidden-xs
+
+      %h2
+        What to expect
+
+      .row
+        .col-xs-12
+          %ul
+            %li
+              Collaboration on projects
+            %li
+              Introduction to people/communities
+            %li
+              Demonstration of new concepts
+            %li
+              Pair programming
+
+      .row
+        = render 'as_a_student'
+        = render 'as_a_mentor'
+
+      .row
+        .col-sm-2.hidden-xs
+        .col-xs-12.col-sm-8
+          %p.summary
+            The journey of a mentor and student is mutually beneficial. It is about
+            sharing, humility, and openness to new thought. Both people gain insight
+            on how to better approach a challenge.
+        .col-sm-2.hidden-xs
+

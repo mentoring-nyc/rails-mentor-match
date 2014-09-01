@@ -1,0 +1,536 @@
+body {
+  background-color: #efefef;
+  font-size: 12px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.3em
+}
+
+p {
+  color: #666;
+  font-family: 'Merriweather';
+  font-weight: 200;
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+input[type=checkbox], input[type=radio] {
+  margin: 4px 0 0 0;
+}
+
+.alert {
+  font-size: 14px;
+  padding: 10px 35px 10px 15px;
+}
+
+.signup-steps {
+  margin-bottom: 30px;
+}
+
+.signup-steps p {
+  font-size: 1.2em;
+}
+
+.signup-steps li {
+  font-size: 1.6em;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.signup-steps li span.fa {
+  font-size: 1.4em;
+}
+
+.signup-steps li p {
+  font-size: 0.75em;
+}
+
+.signup-steps h3 {
+  margin-top: 30px;
+}
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;;
+  letter-spacing: .07em;
+  margin-bottom: 0;
+  min-height: 0;
+}
+
+.navbar > .container-fluid {
+  padding-top: 0;
+}
+
+.navbar-nav > li > a {
+  font-size: 1em;
+  padding: 20px 15px 0 15px;
+}
+
+.navbar-toggle {
+  margin-top: 10px;
+  padding: 9px 10px 0 10px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #666;
+}
+
+.navbar-brand {
+  color: #333;
+  font-size: 1.2em;
+  height: auto;
+  padding: 20px 15px 5px 15px;
+  text-transform: uppercase;
+}
+
+.navbar-brand:visited {
+  color: #333;
+}
+
+.navbar-brand:hover {
+  color: #666;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown a {
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.nav > li > a:hover {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-menu > li > a {
+  color: #888;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.profile {
+  margin-top: 20px;
+}
+
+.profile label {
+  text-transform: capitalize;
+}
+
+.profile .actions {
+  margin-top: 10px;
+}
+
+.profile .radio {
+  margin: 0;
+}
+
+.profile .glyphicon.textarea {
+  margin-right: 15px;
+}
+
+.profile .image {
+  margin-bottom: 5px;
+}
+
+.profile .image img {
+  border-radius: 8px;
+  width: 230px;
+}
+
+.profile .name {
+  color: #444;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.profile .divider {
+  width: 230px;
+}
+
+.profile .divider hr {
+  border-top: 1px solid #ccc;
+}
+
+.profile .note-with-icon {
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+.profile .fa-map-marker, .profile .fa-github, .profile .fa-clock-o {
+  color: #ccc;
+  font-size: 18px;
+  margin-right: 5px;
+  text-align: center;
+  width: 15px;
+}
+
+.profile label {
+  font-size: 14px;
+}
+
+.profile .form-group {
+  margin: 10px 0 0 0;
+}
+
+h2 span.fa-trophy {
+  font-size: 1.2em;
+}
+
+h2 p.detail {
+  color: #aaa;
+  font-size: 0.5em;
+}
+
+.challenge {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+.challenge .name {
+  font-size: 1.8em;
+}
+
+.content-head {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-body {
+}
+
+.problem {
+  font-size: 1.4em;
+  font-weight: 300;
+  letter-spacing: .05em;
+}
+
+.editor-settings {
+  background: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.ace_scroller {
+  margin: 5px;
+}
+
+#editor.ace-xcode .ace_marker-layer .ace_active-line {
+  background: transparent;
+}
+
+#editor {
+  border: 1px solid #aaa;
+  bottom: 0;
+  font-size: 14px;
+  height: 200px;
+  left: 15px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.hero {
+  font-size: 1.3em;
+}
+
+.hero > .row > div {
+  background-image: url(<%= asset_url('backgrounds/mountain-path.jpg') %>);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #999;
+  color: #fff;
+  z-index: 10;
+}
+
+.header {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;;
+  letter-spacing: .07em;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.header .links {
+  margin-top: 20px;
+}
+
+#slidebox {
+  margin-top: -268px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.signup {
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.55);
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 3px 2px 2px 0px rgba(0,0,0,0.55);
+}
+
+.signup form {
+  padding: 20px;
+}
+
+.mission {
+  margin-top: 20px;
+  padding: 40px;
+}
+
+.mission .subtitle {
+  font-family: 'Droid Serif';
+  font-size: 0.95em;
+  font-style: italic;
+  letter-spacing: .07em;
+  margin: 10px auto;
+  text-transform: capitalize;
+}
+
+.mission .title {
+  font-family: 'Montserrat', sans-serif;;
+  font-size: 1.65em;
+  font-weight: 700;
+  letter-spacing: .07em;
+  line-height: 1;
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+
+.mission .action {
+  margin: 10px auto;
+}
+
+.mission .action .btn-signup {
+  font-size: 1.1em;
+  letter-spacing: .08em;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.content {
+  font-family: 'Droid Serif';
+  padding: 20px 40px 40px 40px;
+}
+
+.content h2 {
+  font-size: 2.5em;
+  line-height: 1.3;
+}
+
+.content img {
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.55);
+  box-shadow: 3px 2px 2px 0px rgba(0,0,0,0.55);
+  margin: 30px auto 0 auto;
+}
+
+.content h3 {
+  color: #eea236;
+  font-size: 1.6em;
+  font-style: italic;
+  margin: 30px 0 10px 0;
+  text-transform: capitalize;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  text-indent: 20px;
+}
+
+.content p.summary {
+  color: #333;
+  font-family: 'Merriweather';
+  font-style: italic;
+}
+
+.content ul {
+  color: #666;
+  font-family: 'Merriweather';
+  font-size: 1.3em;
+  line-height: 1.6;
+  list-style-type: none;
+  padding: 0;
+}
+
+.ace_gutter-layer {
+  color: #666;
+  font-family: Merriweather;
+  font-size: 1.1em;
+}
+
+.spotlight .profile {
+  display: inline-block;
+  font-family: 'Montserrat';
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.spotlight .profile .img {
+  margin-bottom: 10px;
+}
+
+.spotlight .profile img {
+  -webkit-clip-path: circle(100px at 100px 100px);
+  border-radius: 8px;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+.spotlight .profile .name {
+  color: #428bca;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.spotlight .profile .name:hover {
+  color: #357ebd;
+}
+
+.spotlight .profile .location {
+  color: #888;
+  font-size: 16px;
+}
+
+.popover {
+  background-color: #fff;
+  font-family: 'Montserrat';
+  margin-bottom: 20px;
+  max-width: 350px;
+  width: 300px;
+}
+
+.popover-content {
+  color: #888;
+  font-weight: 200;
+  letter-spacing: 0.04em;
+}
+
+.popover-content h5 {
+  color: #333;
+  margin: 10px 0 0 0;
+}
+
+.popover-content h5:first-child {
+  margin: 0;
+}
+
+.popover-content p.github {
+  text-transform: lowercase;
+}
+
+.popover-content p.bio {
+  text-transform: none;
+}
+
+.popover-content .list:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.popover-content .list p {
+  float: left;
+  margin-right: 10px;
+}
+
+.popover-content .list p span.fa {
+  margin-right: 5px;
+}
+
+.popover-content p {
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.popover-title {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  border-radius: 5px 5px 0 0;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 10px 14px 5px 14px;
+}
+
+.popover-title .btn-group {
+  float: right;
+}
+
+.popover-title p {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+}
+
+@media (min-width: 640px) {
+  .header {
+    font-size: 16px;
+  }
+
+  .mission .subtitle {
+    font-size: 1.2em;
+  }
+
+  .mission .title {
+    font-size: 4em;
+    margin: 20px auto;
+  }
+
+  .mission .action .btn-signup {
+    font-size: 1em;
+  }
+}
+

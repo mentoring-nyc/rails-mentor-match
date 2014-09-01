@@ -1,0 +1,73 @@
+.container-fluid.profile
+  = simple_form_for @profile, method: :post, url: signup_complete_profile_submission_path do |f|
+    .row
+      .col-xs-12.col-sm-4{style: 'width: 270px;'}
+        %p.image
+          %img{alt: "image of #{@profile.name}", src: @profile.image}
+
+        - if @profile.name
+          %h2.name
+            = @profile.name
+
+        .divider
+          %hr
+
+        .note-with-icon.created
+          %span.fa.fa-clock-o
+          == Created #{current_user.created_at.strftime('%B %d, %Y')}
+
+      .col-xs-12.col-sm-8.col-md-6
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              Profile
+
+          .panel-body
+            - if @profile.name.empty?
+              .row
+                .col-xs-12
+                  = f.input :name, hint: false, error: false, error_html: {class: 'glyphicon form-control-feedback glyphicon-remove'} do
+                    = f.input_field :name
+                    - if f.error :name
+                      %span.glyphicon.form-control-feedback.glyphicon-remove
+                      = f.error :name
+
+            .row
+              .col-xs-12
+                = f.input :location, hint: false, error: false, error_html: {class: 'glyphicon form-control-feedback glyphicon-remove'} do
+                  = f.input_field :location, placeholder: 'Example: Brooklyn, Manhattan, New York'
+                  - if f.error :location
+                    %span.glyphicon.form-control-feedback.glyphicon-remove
+                    = f.error :location
+
+            .row
+              .col-xs-12
+                = f.input :bio, as: :text, hint: false, error: false
+                - if f.error :bio
+                  = f.error :bio
+
+            .row
+              .col-xs-12
+                .form-group{class: ('has-error has-feedback' if f.error(:availability))}
+                  %label.control-label{for: :availability}<
+                    Availability
+
+                  .row
+                    - Profile::AVAILABILITIES.each_slice(3).each do |array|
+                      - array.each do |availability|
+                        .col-xs-6
+                          .radio
+                            %label
+                              %input{type: :radio, name: :'profile[availability]', checked: ('checked' if @profile.availability?), value: availability}
+                              = availability.capitalize
+
+            .row
+              .col-xs-12
+                = f.input :skills, label: 'Current Skills', hint: false, error: false, error_html: {class: 'glyphicon form-control-feedback glyphicon-remove'} do
+                  = f.input_field :skills, placeholder: 'Example: Ruby, Ruby, JavaScript, Angular, CSS'
+                  - if f.error :skills
+                    %span.glyphicon.form-control-feedback.glyphicon-remove
+                    = f.error :skills
+
+            .actions.text-right
+              %button.btn.btn-primary{type: :submit} Submit Profile
