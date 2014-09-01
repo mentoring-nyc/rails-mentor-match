@@ -15,6 +15,12 @@ Bundler.require(*Rails.groups)
 
 module MentoringNyc
   class Application < Rails::Application
+    require Rails.root.join('lib/rack-health')
+
+    config.cache_store = :redis_store, ENV['REDISCLOUD_URL'], { expires_in: 90.minutes }
+
+    config.middleware.insert_before Rack::Sendfile, Rack::Health, routes: ['/ping', '/PING'], response: ['PONG']
+
     config.autoload_paths << Rails.root.join('lib')
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
